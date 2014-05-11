@@ -40,7 +40,7 @@ setInterval(function (){
 ##Methods
 
 ###push
-Accepts 1 paramater, namely the item that is to be pushed into the buffer.
+Accepts 1 parameter, namely the item that is to be pushed into the buffer.
 ####note:
 Uses unshift internally.
 
