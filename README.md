@@ -33,8 +33,8 @@ setInterval(function (){
 ```
 
 ###Optional parameters
-- timePadding: Used to pad the timeMS can be used to insure the retrieval of a full-buffer when using getByTime with a value equal to the timeMS.
-- defaultLength: Default value of the length property, used to insure we don't slice an empty array.
+- timePadding: Used to pad the timeMS can be used to ensure the retrieval of a full-buffer when using getByTime with a value equal to the timeMS.
+- defaultLength: Default value of the length property, used to ensure we don't slice an empty array.
 - sampleRateRetention: The length of the internal array of sample-rate (times between pushes) values.
 
 ##Methods
