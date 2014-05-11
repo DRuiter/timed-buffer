@@ -35,7 +35,6 @@ setInterval(function (){
 ###Optional parameters
 - timePadding: Used to pad the timeMS can be used to insure the retrieval of a full-buffer when using getByTime with a value equal to the timeMS.
 - defaultLength: Default value of the length property, used to insure we don't slice an empty array.
-- 
 
 ##Methods
 
@@ -66,8 +65,8 @@ buffer.getLast(); //{wat:'wut'}
 ```
 ###getByTime
 Accepts 2 parameters: 
-- timeMS [required] (amount of miliseconds to request from the buffer) 
-- skipMS [optional] (amount of miliseconds to skip before requesting the timeMS block)
+- timeMS required (amount of miliseconds to request from the buffer) 
+- skipMS optional (amount of miliseconds to skip before requesting the timeMS block)
 
 ```javascript
 var TimedBuffer = require('./timed-buffer'),
