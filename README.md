@@ -98,9 +98,6 @@ buffer.on('add', function (addedItem){
 ###change
 Supplies the entire buffer when a change is made.
 
-####note
-The array is sorted with the newest values at the beginning and the oldest values at the end.
-
 ```javascript
 var TimedBuffer = require('./timed-buffer'),
 	buffer      = new TimedBuffer(1000);
@@ -109,3 +106,7 @@ buffer.on('change', function (buffer){
     console.log(buffer);
 })
 ```
+####note
+The array is sorted with the newest values at the beginning and the oldest values at the end.
+
+
