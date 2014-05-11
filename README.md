@@ -41,16 +41,19 @@ setInterval(function (){
 
 ###push
 Accepts 1 parameter, namely the item that is to be pushed into the buffer.
-####note:
-Uses unshift internally.
-
-This also triggers the sample-rate checks, a buffer that isn't pushed to for a long time won't empty out on it's own.  Timed-buffer was developed with a constant stream of data in mind.
 
 ```javascript
 var TimedBuffer = require('./timed-buffer'),
 	buffer      = new TimedBuffer(1000);
 
 buffer.push({foo:'bar'});
+
+####note:
+Uses unshift internally.
+
+This also triggers the sample-rate checks, a buffer that isn't pushed to for a long time won't empty out on it's own.  Timed-buffer was developed with a constant stream of data in mind.
+
+
 ```
 ###getLast
 Returns the last item pushed into the buffer.
