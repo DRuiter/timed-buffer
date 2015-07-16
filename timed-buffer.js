@@ -82,8 +82,8 @@ TimedBuffer.prototype.getByTime = function ( timeMS, skipMS ) {
       skip;
 
   if(skipMS) {
-    requiredFromBuffer = Math.ceil(timeMS/this.sampleRate);
-    skip 				       = Math.ceil(skipMS/this.sampleRate);
+    requiredFromBuffer  = Math.ceil(timeMS/this.sampleRate);
+    skip                = Math.ceil(skipMS/this.sampleRate);
 
     return this.buffer.slice(skip, (skip+requiredFromBuffer));
   } else {
