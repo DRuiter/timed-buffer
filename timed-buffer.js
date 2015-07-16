@@ -6,17 +6,17 @@ function TimedBuffer ( timeMS, options ){
 
   if(typeof(options) !== 'object') options = {};
 
-  var self 			= this;
+  var self      = this;
 
-  this.ms 			= options.timePadding+timeMS || timeMS;
+  this.ms       = options.timePadding+timeMS || timeMS;
 
-  this.buffer 	= [];
-  this.length		= options.defaultLength || 2;
+  this.buffer   = [];
+  this.length   = options.defaultLength || 2;
 
-  this.sampleRate 							= 0;
-  this._sampleRateBuffer				= [];
-  this._sampleRateBufferLength	= options.sampleRateRetention || 50;
-  this._lastTime								= new Date().getTime();
+  this.sampleRate               = 0;
+  this._sampleRateBuffer        = [];
+  this._sampleRateBufferLength  = options.sampleRateRetention || 50;
+  this._lastTime                = new Date().getTime();
 
   return this;
 }
@@ -27,15 +27,15 @@ TimedBuffer.prototype._time = function () {
   var time = new Date().getTime();
 
   //Step Time
-  this._addToTimeBuffer(time-this._lastTime);
-  this._lastTime 	= time;
+  this._addToTimeBuffer(time - this._lastTime);
+  this._lastTime  = time;
 
   //Step Sample Rate
-  var sampleRate 	= this._calcSampleRate();
+  var sampleRate  = this._calcSampleRate();
   this._setSampleRate(sampleRate);
 
   //Step Length
-  var length 			= this._calcLength();
+  var length      = this._calcLength();
   this._setLength(length);
 };
 
