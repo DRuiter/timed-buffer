@@ -4,6 +4,8 @@ function TimedBuffer ( timeMS, options ){
   if(!timeMS || typeof(timeMS) !== 'number')
     throw 'TimedBuffer > ERROR: TimedBuffer requires > (int) timeMS';
 
+  EventEmitter.call(this);
+
   if(typeof(options) !== 'object') options = {};
 
   var self      = this;
